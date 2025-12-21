@@ -1,0 +1,7 @@
+amazon-workspaces-bin-debug
+grimblast-git
+slack-desktop
+timeshift-autosnap
+visual-studio-code-bin
+yay
+yay-debug

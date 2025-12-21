@@ -1,0 +1,4 @@
+# Ignore cache and temporary files if you back them up
+*.cache
+*.tmp
+.DS_Store
