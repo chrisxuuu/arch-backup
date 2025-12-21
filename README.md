@@ -1,7 +1,5 @@
 # Arch Linux Backup
 
-Personal backup of my Arch Linux system configuration.
-
 ## Contents
 
 - `pkglist.txt` - Official repository packages
