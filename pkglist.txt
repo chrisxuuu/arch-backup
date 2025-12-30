@@ -1,5 +1,4 @@
 7zip
-alacritty
 amazon-workspaces-bin-debug
 arch-audit
 awww-git
@@ -20,6 +19,7 @@ fastfetch
 fd
 firefox
 gcc-fortran
+ghostty
 git
 gnome-keyring
 grimblast-git
