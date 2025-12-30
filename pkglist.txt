@@ -2,6 +2,7 @@
 alacritty
 amazon-workspaces-bin-debug
 arch-audit
+awww-git
 base
 base-devel
 blueman
@@ -9,6 +10,7 @@ bluez-utils
 breeze
 breeze-gtk
 brightnessctl
+btop
 cliphist
 cmake
 discord
@@ -24,7 +26,6 @@ grimblast-git
 grub
 hyprland
 hyprlock
-hyprpaper
 hyprpolkitagent
 intel-ucode
 kde-cli-tools
