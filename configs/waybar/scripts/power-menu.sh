@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Power menu script for Waybar + rofi
-# Save this to ~/.config/waybar/scripts/power-menu.sh
-
 options="⏾ Suspend\n⭮ Restart\n⏻ Shutdown\n🔒 Lock"
-
 chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" \
     -theme-str 'window {width: 400px;}' \
     -theme-str 'listview {lines: 4;}' \

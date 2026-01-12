@@ -15,6 +15,7 @@ cmake
 discord
 dolphin
 efibootmgr
+evtest
 fastfetch
 fd
 firefox
@@ -45,6 +46,10 @@ neovim
 network-manager-applet
 networkmanager
 nodejs
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 npm
 nvidia-open
 nvidia-settings

@@ -4,60 +4,119 @@ configuration {
     display-drun: " ";
     display-run: " ";
     display-window: " ";
+    font: "JetBrainsMono Nerd Font 13";
 }
 
 * {
-    background-color: transparent;
-    text-color: #ffffff;
+    bg: #1a1b26;
+    fg: #a9b1d6;
+    cyan: #0db9d750;
+    dark: #444b6a60;
+    gray: #6b7089;
+    selected: #444b6a80;
+    
+    background-color: @bg;
+    text-color: @fg;
 }
 
 window {
     transparency: "real";
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
-    width: 40%;
-    location: center;
-    anchor: center;
+    background-color: #1a1b26d9;
+    border: 1px;
+    border-color: @cyan;
+    border-radius: 16px;
+    width: 35%;
 }
 
 mainbox {
-    padding: 20px;
-    background-color: rgba(20, 20, 20, 0.95);
-    border-radius: 10px;
+    padding: 12px;
+    background-color: transparent;
+    spacing: 10px;
 }
 
 inputbar {
-    background-color: rgba(50, 50, 50, 0.8);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 0 0 10px 0;
-    text-color: #ffffff;
+    background-color: @dark;
+    border: 1px;
+    border-color: @cyan;
+    border-radius: 12px;
+    padding: 8px 12px;
+    text-color: @fg;
     children: [prompt, entry];
+    spacing: 10px;
 }
 
 entry {
-    text-color: #ffffff;
-    placeholder-color: rgba(255, 255, 255, 0.5);
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @gray;
+    background-color: transparent;
 }
 
 prompt {
-    text-color: #ffffff;
+    text-color: @cyan;
+    background-color: transparent;
 }
 
 listview {
     lines: 8;
     scrollbar: false;
     background-color: transparent;
+    spacing: 4px;
+    padding: 4px 0;
 }
 
 element {
-    padding: 8px;
-    border-radius: 5px;
-    background-color: rgba(30, 30, 30, 0.7);
-    margin: 2px 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: transparent;
+    text-color: @fg;
+    spacing: 10px;
 }
 
-element selected {
-    background-color: rgba(100, 150, 255, 0.5);
-    text-color: #ffffff;
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.active {
+    background-color: @selected;
+    text-color: @fg;
+}
+
+element alternate.active {
+    background-color: @selected;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @fg;
+    border: 0px;
+}
+
+element selected.active {
+    background-color: @selected;
+    text-color: @fg;
+    border: 0px;
+}
+
+element alternate.selected.normal {
+    background-color: @selected;
+    text-color: @fg;
+    border: 0px;
+}
+
+element-icon {
+    size: 24px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
 }

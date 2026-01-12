@@ -9,127 +9,214 @@
 @define-color cyn #0db9d7;
 @define-color brblk #444b6a;
 @define-color white #ffffff;
+
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
+  min-height: 0;
 }
+
 window#waybar {
-  background-color: @bg;
+  background-color: transparent;
   color: @fg;
 }
-#workspaces button {
-  padding: 0 6px;
-  color: @cyn;
-  background: transparent;
-  border-bottom: 3px solid @bg;
+
+/* Tooltip styling */
+tooltip {
+  background: rgba(26, 27, 38, 0.95);
+  border: 2px solid @cyn;
+  border-radius: 12px;
 }
+
+tooltip label {
+  color: @fg;
+}
+
+/* Workspaces bubble styling */
+#workspaces {
+  background: rgba(26, 27, 38, 0.85);
+  border-radius: 16px;
+  margin: 1px 0px;
+  padding: 0px 8px;
+}
+
+#workspaces button {
+  padding: 0px 8px;
+  color: @brblk;
+  background: transparent;
+  border-radius: 12px;
+  margin: 2px 2px;
+  transition: all 0.3s ease;
+}
+
 #workspaces button.active {
   color: @cyn;
-  border-bottom: 3px solid @mag;
+  background: rgba(125, 162, 247, 0.2);
 }
-#workspaces button.empty {
-  color: @brblk;
+
+#workspaces button:hover {
+  background: rgba(169, 177, 214, 0.15);
+  color: @fg;
 }
-#workspaces button.empty.active {
-  color: @cyn;
-  border-bottom: 3px solid @mag;
-}
+
 #workspaces button.urgent {
   background-color: @red;
+  color: @bg;
 }
-button:hover {
-  background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+
+/* Window title */
+#window {
+  background: rgba(26, 27, 38, 0.85);
+  border-radius: 16px;
+  margin: 1px 8px;
+  padding: 2px 16px;
+  color: @fg;
 }
+
+/* Module bubble styling */
 #clock,
-#custom-sep,
 #battery,
 #cpu,
 #memory,
 #disk,
-#network,
-#tray {
-  padding: 0 8px;
-  color: @brblk;
+#pulseaudio,
+#tray,
+#custom-wifi,
+#custom-bluetooth {
+  background: rgba(26, 27, 38, 0.85);
+  border-radius: 16px;
+  margin: 1px 4px;
+  padding: 2px 14px;
+  transition: all 0.3s ease;
 }
-#custom-sep {
-  color: @brblk;
-}
+
 #clock {
   color: @cyn;
-  border-bottom: 4px solid @cyn;
+  background: rgba(13, 185, 215, 0.15);
+  border: 2px solid transparent;
 }
+
+#clock:hover {
+  border: 2px solid @cyn;
+}
+
 #battery {
   color: @mag;
-  border-bottom: 4px solid @mag;
+  background: rgba(173, 142, 230, 0.15);
 }
+
+#battery.charging {
+  color: @grn;
+  background: rgba(158, 206, 106, 0.15);
+}
+
+#battery.warning:not(.charging) {
+  color: @ylw;
+  background: rgba(224, 175, 104, 0.15);
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  background: rgba(247, 118, 142, 0.15);
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  to {
+    background-color: rgba(247, 118, 142, 0.35);
+  }
+}
+
 #disk {
   color: @ylw;
-  border-bottom: 4px solid @ylw;
+  background: rgba(224, 175, 104, 0.15);
 }
+
 #memory {
   color: @mag;
-  border-bottom: 4px solid @mag;
+  background: rgba(173, 142, 230, 0.15);
 }
+
 #cpu {
   color: @grn;
-  border-bottom: 4px solid @grn;
+  background: rgba(158, 206, 106, 0.15);
 }
-#network {
-  color: @blu;
-  border-bottom: 4px solid @blu;
-}
-#network.disconnected {
-  background-color: @red;
-}
-#tray {
-  color: @fg;
-  border-bottom: 4px solid @fg;
-}
+
 #pulseaudio {
   color: @ylw;
-  border-bottom: 4px solid @ylw;
+  background: rgba(224, 175, 104, 0.15);
 }
-#bluetooth {
-  color: @blu;
-  border-bottom: 4px solid @blu;
-}
-#bluetooth.disabled {
+
+#pulseaudio.muted {
   color: @brblk;
-  border-bottom: 4px solid @brblk;
+  background: rgba(68, 75, 106, 0.15);
 }
-#bluetooth.connected {
-  color: @grn;
-  border-bottom: 4px solid @grn;
+
+#tray {
+  background: rgba(26, 27, 38, 0.85);
+  padding: 2px 12px;
 }
-/* Discord styling */
-#custom-discord {
-  padding: 0 8px;
-  color: @brblk;
-  border-bottom: 4px solid @brblk;
+
+#tray>.passive {
+  -gtk-icon-effect: dim;
 }
-#custom-discord.running {
-  color: #5865F2;
-  border-bottom: 4px solid #5865F2;
-}
-/* Slack styling */
-#custom-slack {
-  padding: 0 8px;
-  color: @brblk;
-  border-bottom: 4px solid @brblk;
-}
-#custom-slack.running {
-  color: #4A154B;
-  border-bottom: 4px solid #4A154B;
-}
-/* Power button styling */
-#custom-power {
-  padding: 0 8px;
-  color: @red;
-  border-bottom: 4px solid @red;
-}
-#custom-power:hover {
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
   background-color: @red;
+}
+
+/* WiFi module */
+#custom-wifi {
+  color: @blu;
+  background: rgba(122, 162, 247, 0.15);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#custom-wifi:hover {
+  border: 2px solid @blu;
+  background: rgba(122, 162, 247, 0.25);
+}
+
+/* Bluetooth module */
+#custom-bluetooth {
+  color: @blu;
+  background: rgba(122, 162, 247, 0.15);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#custom-bluetooth:hover {
+  border: 2px solid @blu;
+  background: rgba(122, 162, 247, 0.25);
+}
+
+/* Power button */
+#custom-power {
+  background: rgba(247, 118, 142, 0.15);
+  border-radius: 16px;
+  margin: 1px 4px;
+  padding: 2px 14px;
+  color: @red;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#custom-power:hover {
+  background: @red;
   color: @bg;
+  border: 2px solid @red;
+}
+
+/* Hover effects for all modules */
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#pulseaudio:hover,
+#tray:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
