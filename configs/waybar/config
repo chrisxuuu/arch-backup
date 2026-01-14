@@ -12,6 +12,7 @@
     ],
     "modules-center": [],
     "modules-right": [
+        "custom/dnd",
         "pulseaudio",
         "custom/wifi",
         "custom/bluetooth",
@@ -130,6 +131,16 @@
         "interval": 3,
         "return-type": "json",
         "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
+        "tooltip": true
+    },
+    
+    // Do Not Disturb toggle
+    "custom/dnd": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/dnd-toggle.sh",
+        "interval": 1,
+        "return-type": "json",
+        "on-click": "~/.config/waybar/scripts/dnd-toggle.sh toggle",
         "tooltip": true
     }
 }

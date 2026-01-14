@@ -41,6 +41,7 @@ ly
 lynis
 mako
 mesa-utils
+mpv
 nano
 neovim
 network-manager-applet
