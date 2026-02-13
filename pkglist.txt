@@ -1,5 +1,4 @@
 7zip
-amazon-workspaces-bin-debug
 arch-audit
 awww-git
 base

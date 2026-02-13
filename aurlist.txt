@@ -1,4 +1,3 @@
-amazon-workspaces-bin-debug
 awww-git
 grimblast-git
 slack-desktop
