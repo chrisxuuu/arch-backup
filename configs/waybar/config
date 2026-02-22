@@ -13,7 +13,7 @@
     "modules-center": [],
     "modules-right": [
         "custom/dnd",
-        "pulseaudio",
+        "custom/audio",
         "custom/wifi",
         "custom/bluetooth",
         "cpu",
@@ -97,21 +97,15 @@
     },
     
     // Audio
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": " {volume}%",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "scroll-step": 5,
-        "on-click": "pavucontrol",
-        "tooltip-format": "{desc}\nVolume: {volume}%"
+     "custom/audio": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/audio-status.sh",
+        "interval": 2,
+        "return-type": "json",
+        "on-click": "~/.config/waybar/scripts/audio-menu.sh",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "tooltip": true
     },
     
     // WiFi module

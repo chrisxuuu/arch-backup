@@ -220,3 +220,43 @@ tooltip label {
 #tray:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+/* Audio module */
+#custom-audio {
+  background: rgba(224, 175, 104, 0.15);
+  border-radius: 16px;
+  margin: 1px 4px;
+  padding: 2px 14px;
+  color: @ylw;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#custom-audio:hover {
+  border: 2px solid @ylw;
+}
+
+/* Do Not Disturb module */
+#custom-dnd {
+  background: rgba(26, 27, 38, 0.85);
+  border-radius: 16px;
+  margin: 1px 4px;
+  padding: 2px 14px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#custom-dnd.dnd-off {
+  color: @cyn;
+  background: rgba(13, 185, 215, 0.15);
+}
+
+#custom-dnd.dnd-on {
+  color: @red;
+  background: rgba(247, 118, 142, 0.15);
+  border: 2px solid @red;
+}
+
+#custom-dnd:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
