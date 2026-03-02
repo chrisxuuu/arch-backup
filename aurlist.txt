@@ -1,5 +1,6 @@
 awww-git
 grimblast-git
+shim-signed
 slack-desktop
 timeshift-autosnap
 visual-studio-code-bin

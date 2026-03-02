@@ -4,11 +4,14 @@ arch-audit
 awww-git
 base
 base-devel
+btop
 clang
+discord
 dolphin
 efibootmgr
 fd
 firefox
+fuse3
 fzf
 ghostty
 git
@@ -17,6 +20,7 @@ gnome-themes-extra
 grimblast-git
 grub
 hypridle
+hyprlock
 imagemagick
 kvantum
 linux
@@ -26,10 +30,14 @@ logrotate
 ly
 lynis
 mako
+mokutil
 neovim
 networkmanager
 nftables
 nodejs
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
 npm
 nvidia-open-dkms
 nvidia-utils
@@ -45,6 +53,7 @@ rkhunter
 rofi
 rust
 seahorse
+shim-signed
 slack-desktop
 steam
 sudo
@@ -56,6 +65,7 @@ texlive-latexrecommended
 texlive-mathscience
 timeshift-autosnap
 ttf-fira-code
+ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 unzip
 uv
