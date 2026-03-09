@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(systemctl is-active ollama)",
+      "Bash(systemctl --user is-active ollama)",
+      "Read(//etc/systemd/system/**)",
+      "Bash(sudo -l)",
+      "Bash(sudo:*)"
+    ]
+  }
+}

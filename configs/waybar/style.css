@@ -236,6 +236,31 @@ tooltip label {
   border: 2px solid @ylw;
 }
 
+/* Ollama indicator */
+#custom-ollama {
+  background: rgba(26, 27, 38, 0.85);
+  border-radius: 16px;
+  margin: 1px 4px;
+  padding: 2px 14px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#custom-ollama.running {
+  color: @grn;
+  background: rgba(158, 206, 106, 0.15);
+  border: 2px solid @grn;
+}
+
+#custom-ollama.stopped {
+  color: @brblk;
+  background: rgba(50, 52, 74, 0.5);
+}
+
+#custom-ollama:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Do Not Disturb module */
 #custom-dnd {
   background: rgba(26, 27, 38, 0.85);

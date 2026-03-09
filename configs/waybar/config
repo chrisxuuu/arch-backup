@@ -16,6 +16,7 @@
         "custom/audio",
         "custom/wifi",
         "custom/bluetooth",
+        "custom/ollama",
         "cpu",
         "memory",
         "disk",
@@ -128,6 +129,16 @@
         "tooltip": true
     },
     
+    // Ollama indicator
+    "custom/ollama": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/ollama-status.sh",
+        "interval": 5,
+        "return-type": "json",
+        "on-click": "~/.config/waybar/scripts/ollama-toggle.sh",
+        "tooltip": true
+    },
+
     // Do Not Disturb toggle
     "custom/dnd": {
         "format": "{}",

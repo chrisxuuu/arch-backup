@@ -9,6 +9,7 @@ clang
 discord
 dolphin
 efibootmgr
+ex-vi-compat
 fd
 firefox
 fuse3
@@ -31,6 +32,7 @@ ly
 lynis
 mako
 mokutil
+nano
 neovim
 networkmanager
 nftables
