@@ -17,6 +17,7 @@
         "custom/wifi",
         "custom/bluetooth",
         "custom/ollama",
+        "custom/tailscale",
         "cpu",
         "memory",
         "disk",
@@ -129,6 +130,16 @@
         "tooltip": true
     },
     
+    // Tailscale indicator
+    "custom/tailscale": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/tailscale-status.sh",
+        "interval": 5,
+        "return-type": "json",
+        "on-click": "~/.config/waybar/scripts/tailscale-toggle.sh",
+        "tooltip": true
+    },
+
     // Ollama indicator
     "custom/ollama": {
         "format": "{}",

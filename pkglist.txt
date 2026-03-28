@@ -59,6 +59,7 @@ shim-signed
 slack-desktop
 steam
 sudo
+tailscale
 texlive-basic
 texlive-fontsrecommended
 texlive-latex
