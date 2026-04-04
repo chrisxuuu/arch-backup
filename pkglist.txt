@@ -33,6 +33,7 @@ lynis
 mako
 mokutil
 nano
+ncspot
 neovim
 networkmanager
 nftables
@@ -44,6 +45,7 @@ npm
 nvidia-open-dkms
 nvidia-utils
 os-prober
+pamixer
 pandoc-cli
 pavucontrol
 pipewire-pulse
