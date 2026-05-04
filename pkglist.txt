@@ -82,4 +82,5 @@ wl-clipboard
 yay
 yay-debug
 yazi
+zed
 zoxide
